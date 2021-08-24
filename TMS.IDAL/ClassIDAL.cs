@@ -15,5 +15,7 @@ namespace TMS.IDAL
         int Update(ClassModel s);
         //反填
         ClassModel Fantian(int Studentid);
+        //登录
+        Login login(string LoginName, string LoginMima);
     }
 }

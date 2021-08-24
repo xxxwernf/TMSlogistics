@@ -1,19 +1,26 @@
 ﻿{
+  //各种开发配置相关的信息(运维，减少工作量)
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+      //iis配置
       "applicationUrl": "http://localhost:34255",
       "sslPort": 44350
     }
   },
+  //个人配置信息
   "profiles": {
     "IIS Express": {
+
+      //命令名称（最上面那个运行）
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
+      //环境变量，开发环境，
       "environmentVariables": {
+        //只本地文件里面
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

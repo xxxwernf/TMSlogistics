@@ -7,6 +7,7 @@ namespace TMS.Common
 {
     public class ClassCommon
     {
-      
+
     }
+
 }

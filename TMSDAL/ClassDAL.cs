@@ -43,5 +43,11 @@ namespace TMS.DAL
             string sql = $"Update Student set Studentname='{s.Studentname}',Studentage='{s.Studentage}',Studentdizhi='{s.Studentdizhi}',StudentTime='{s.StudentTime}' where Studentid in ({s.Studentid})";
             return conn.Execute(sql);
         }
+        //登录
+        public Login login(string LoginName, string LoginMima)
+        {
+            string sql = $"select *from Login where LoginName='{LoginName}' and LoginMima='{LoginMima}'";
+            return conn.QueryFirst<Login>(sql);
+        }
     }
 }
