@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using TMSlogistic.Model;
 namespace TMS.IDAL
 {
-    public interface shippercontractIDAL
+    public interface ShippercontractIDAL
     {
         //显示
-        List<shippercontractModel> Show();
+        List<ShippercontractModel> Show();
         //删除
         int Del(int id);
         //添加
-        int Add(shippercontractModel s);
+        int Add(ShippercontractModel s);
         //修改
-        int Update(shippercontractModel s);
+        int Update(ShippercontractModel s);
         //反填
-        shippercontractModel Fantian(int id);
+        ShippercontractModel Fantian(int id);
         ////登录
         //Login login(string LoginName, string LoginMima);
     }

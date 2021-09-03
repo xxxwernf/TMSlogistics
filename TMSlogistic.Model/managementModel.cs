@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //合同管理
-   public class managementModel
+   public class ManagementModel
     {
         public int managementid { get; set; }
         public string managementSerial	{ get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //邮费
-   public class fuelModel
+   public class FuelModel
     {
         public int fuelId { get; set; }
         public string   plate_number   { get; set; }

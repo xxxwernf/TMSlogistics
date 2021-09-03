@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //外协
-   public class outsourceModel
+   public class OutsourceModel
     {
         public int outsourceId { get; set; }
         public string   unit_Name      { get; set; }

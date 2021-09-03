@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using TMSlogistic.Model;
 namespace TMS.IDAL
 {
-    public interface outsourceIDAL
+    public interface OutsourceIDAL
     {
         //显示
-        List<outsourceModel> Show();
+        List<OutsourceModel> Show();
         //删除
         int Del(int outsourceId);
         //添加
-        int Add(outsourceModel s);
+        int Add(OutsourceModel s);
         //修改
-        int Update(outsourceModel s);
+        int Update(OutsourceModel s);
         //反填
-        outsourceModel Fantian(int outsourceId);
+        OutsourceModel Fantian(int outsourceId);
         ////登录
         //Login login(string LoginName, string LoginMima);
     }

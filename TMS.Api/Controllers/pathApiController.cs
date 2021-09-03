@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class pathApiController : ControllerBase
+    public class PathApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private pathIDAL _pathIDAL;
+        private PathIDAL _pathIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public pathApiController(ILoggerFactory loggerFactory, pathIDAL pathIDAL, Token _token)
+        public PathApiController(ILoggerFactory loggerFactory, PathIDAL pathIDAL, Token _token)
         {
             _pathIDAL = pathIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<pathModel> pathModels = _pathIDAL.Show();
+                List<PathModel> pathModels = _pathIDAL.Show();
                 //m_Logger.LogInformation("测试成功");
                 return Ok(pathModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(pathModel s)
+        public IActionResult Add(PathModel s)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(pathModel s)
+        public IActionResult Update(PathModel s)
         {
             try
             {

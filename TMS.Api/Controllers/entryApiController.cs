@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class entryApiController : ControllerBase
+    public class EntryApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private entryIDAL _entryIDAL;
+        private EntryIDAL _entryIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public entryApiController(ILoggerFactory loggerFactory, entryIDAL entryIDAL, Token _token)
+        public EntryApiController(ILoggerFactory loggerFactory, EntryIDAL entryIDAL, Token _token)
         {
             _entryIDAL = entryIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<entryModel> entryModels = _entryIDAL.Show();
+                List<EntryModel> entryModels = _entryIDAL.Show();
                 //m_Logger.LogInformation("测试成功");
                 return Ok(entryModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(entryModel s)
+        public IActionResult Add(EntryModel s)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(entryModel s)
+        public IActionResult Update(EntryModel s)
         {
             try
             {

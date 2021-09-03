@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using TMSlogistic.Model;
 namespace TMS.IDAL
 {
-    public interface pathIDAL
+    public interface PathIDAL
     {
         //显示
-        List<pathModel> Show();
+        List<PathModel> Show();
         //删除
         int Del(int pathId);
         //添加
-        int Add(pathModel s);
+        int Add(PathModel s);
         //修改
-        int Update(pathModel s);
+        int Update(PathModel s);
         //反填
-        pathModel Fantian(int pathId);
+        PathModel Fantian(int pathId);
         ////登录
         //Login login(string LoginName, string LoginMima);
     }

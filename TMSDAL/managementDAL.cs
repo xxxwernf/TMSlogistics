@@ -12,17 +12,17 @@ using System.Data.SqlClient;
 
 namespace TMS.DAL
 {
-    public class managementDAL : managementIDAL
+    public class ManagementDAL : ManagementIDAL
     {
         //连接数据库
         IDbConnection conn = new SqlConnection("Data Source=.;Initial Catalog=logistics;Integrated Security=True");
         //显示
-        public List<managementModel> Show()
+        public List<ManagementModel> Show()
         {
             string sql = $"select *from management";
-            return conn.Query<managementModel>(sql).ToList();
+            return conn.Query<ManagementModel>(sql).ToList();
         }
-        public int Add(managementModel s)
+        public int Add(ManagementModel s)
         {
             string sql = $"insert into management values('{s.managementSerial}','{s.managementTitle}','{s.managementSum}','{s.managementCondition}','{s.managementPrice}','{s.managementResonsible}','{s.managementTime}','{s.managementMoney}','{s.managementExplain}','{s.managementAlteration}','{s.managementText}')";
             return conn.Execute(sql, s);
@@ -34,15 +34,15 @@ namespace TMS.DAL
             return conn.Execute(sql, managementid);
         }
 
-        public managementModel Fantian(int managementid)
+        public ManagementModel Fantian(int managementid)
         {
             string sql = $"select *from management where managementid in ({managementid})";
-            return conn.Query<managementModel>(sql).FirstOrDefault();
+            return conn.Query<ManagementModel>(sql).FirstOrDefault();
         }
 
      
 
-        public int Update(managementModel s)
+        public int Update(ManagementModel s)
         {
             string sql = $"Update management set managementSerial='{s.managementSerial}',managementTitle='{s.managementTitle}',managementSum='{s.managementSum}',managementCondition='{s.managementCondition}',managementPrice='{s.managementPrice}',managementResonsible='{s.managementResonsible}',managementTime='{s.managementTime}',managementMoney='{s.managementMoney}',managementExplain='{s.managementExplain}', managementAlteration='{s.managementAlteration}',managementText='{s.managementText}' where managementid in ({s.managementid})";
             return conn.Execute(sql);

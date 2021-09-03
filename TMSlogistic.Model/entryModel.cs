@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //入职
-    public class entryModel
+    public class EntryModel
     {
         public int id { get; set; }
         public string  name            { get; set; }
