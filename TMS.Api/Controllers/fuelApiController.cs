@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class fuelApiController : ControllerBase
+    public class FuelApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private fuelIDAL _fuelIDAL;
+        private FuelIDAL _fuelIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public fuelApiController(ILoggerFactory loggerFactory, fuelIDAL fuelIDAL, Token _token)
+        public FuelApiController(ILoggerFactory loggerFactory, FuelIDAL fuelIDAL, Token _token)
         {
             _fuelIDAL = fuelIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<fuelModel> fuelModels = _fuelIDAL.Show();
+                List<FuelModel> fuelModels = _fuelIDAL.Show();
                 //m_Logger.LogInformation("测试成功");
                 return Ok(fuelModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(fuelModel s)
+        public IActionResult Add(FuelModel s)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(fuelModel s)
+        public IActionResult Update(FuelModel s)
         {
             try
             {

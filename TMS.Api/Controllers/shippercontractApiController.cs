@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class shippercontractApiController : ControllerBase
+    public class ShippercontractApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private shippercontractIDAL _shippercontractIDAL;
+        private ShippercontractIDAL _shippercontractIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public shippercontractApiController(ILoggerFactory loggerFactory, shippercontractIDAL shippercontractIDAL, Token _token)
+        public ShippercontractApiController(ILoggerFactory loggerFactory, ShippercontractIDAL shippercontractIDAL, Token _token)
         {
             _shippercontractIDAL = shippercontractIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<shippercontractModel> shippercontractModels = _shippercontractIDAL.Show();
+                List<ShippercontractModel> shippercontractModels = _shippercontractIDAL.Show();
                 m_Logger.LogInformation("测试成功");
                 return Ok(shippercontractModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(shippercontractModel s)
+        public IActionResult Add(ShippercontractModel s)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(shippercontractModel s)
+        public IActionResult Update(ShippercontractModel s)
         {
             try
             {

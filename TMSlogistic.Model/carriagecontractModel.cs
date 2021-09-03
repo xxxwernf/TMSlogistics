@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //--承运
-  public  class carriagecontractModel
+  public  class CarriagecontractModel
     {
         public string id { get; set; }
         public string    contractId       { get; set; }

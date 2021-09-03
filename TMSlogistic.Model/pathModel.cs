@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TMSlogistic.Model
 {
     //线路
-  public  class pathModel
+  public  class PathModel
     {
         public int pathId { get; set; }
         public string  path_Name       { get; set; }

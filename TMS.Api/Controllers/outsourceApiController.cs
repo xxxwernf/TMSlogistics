@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class outsourceApiController : ControllerBase
+    public class OutsourceApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private outsourceIDAL _outsourceIDAL;
+        private OutsourceIDAL _outsourceIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public outsourceApiController(ILoggerFactory loggerFactory, outsourceIDAL outsourceIDAL, Token _token)
+        public OutsourceApiController(ILoggerFactory loggerFactory, OutsourceIDAL outsourceIDAL, Token _token)
         {
             _outsourceIDAL = outsourceIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<outsourceModel> outsourceModels = _outsourceIDAL.Show();
+                List<OutsourceModel> outsourceModels = _outsourceIDAL.Show();
                 //m_Logger.LogInformation("测试成功");
                 return Ok(outsourceModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(outsourceModel s)
+        public IActionResult Add(OutsourceModel s)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(outsourceModel s)
+        public IActionResult Update(OutsourceModel s)
         {
             try
             {

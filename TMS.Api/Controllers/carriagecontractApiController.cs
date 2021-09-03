@@ -14,11 +14,11 @@ namespace TMS.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class carriagecontractApiController : ControllerBase
+    public class CarriagecontractApiController : ControllerBase
     {
         //依赖注入的名字
 
-        private carriagecontractIDAL _carriagecontractIDAL;
+        private CarriagecontractIDAL _carriagecontractIDAL;
         //日志
         /// <summary>
         /// 日志器
@@ -28,7 +28,7 @@ namespace TMS.Api.Controllers
         /// 日志器工厂
         /// </summary>
         private ILoggerFactory m_LoggerFactory;
-        public carriagecontractApiController(ILoggerFactory loggerFactory, carriagecontractIDAL carriagecontractIDAL, Token _token)
+        public CarriagecontractApiController(ILoggerFactory loggerFactory, CarriagecontractIDAL carriagecontractIDAL, Token _token)
         {
             _carriagecontractIDAL = carriagecontractIDAL;
 
@@ -47,7 +47,7 @@ namespace TMS.Api.Controllers
             try
             {
                 //数据集
-                List<carriagecontractModel> carriagecontractModels = _carriagecontractIDAL.Show();
+                List<CarriagecontractModel> carriagecontractModels = _carriagecontractIDAL.Show();
                 //m_Logger.LogInformation("测试成功");
                 return Ok(carriagecontractModels);
             }
@@ -61,7 +61,7 @@ namespace TMS.Api.Controllers
         [Route("add")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Add(carriagecontractModel s)
+        public IActionResult Add(CarriagecontractModel s)
         {
             try
             {
@@ -115,7 +115,7 @@ namespace TMS.Api.Controllers
         [Route("Update")]
         [HttpPost]
         //[Authorize]
-        public IActionResult Update(carriagecontractModel s)
+        public IActionResult Update(CarriagecontractModel s)
         {
             try
             {

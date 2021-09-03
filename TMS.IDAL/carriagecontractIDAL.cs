@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using TMSlogistic.Model;
 namespace TMS.IDAL
 {
-    public interface carriagecontractIDAL
+    public interface CarriagecontractIDAL
     {
         //显示
-        List<carriagecontractModel> Show();
+        List<CarriagecontractModel> Show();
         //删除
         int Del(int id);
         //添加
-        int Add(carriagecontractModel s);
+        int Add(CarriagecontractModel s);
         //修改
-        int Update(carriagecontractModel s);
+        int Update(CarriagecontractModel s);
         //反填
-        carriagecontractModel Fantian(int id);
+        CarriagecontractModel Fantian(int id);
         ////登录
         //Login login(string LoginName, string LoginMima);
     }

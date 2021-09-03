@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using TMSlogistic.Model;
 namespace TMS.IDAL
 {
-    public interface fuelIDAL
+    public interface FuelIDAL
     {
         //显示
-        List<fuelModel> Show();
+        List<FuelModel> Show();
         //删除
         int Del(int fuelId);
         //添加
-        int Add(fuelModel s);
+        int Add(FuelModel s);
         //修改
-        int Update(fuelModel s);
+        int Update(FuelModel s);
         //反填
-        fuelModel Fantian(int fuelId);
+        FuelModel Fantian(int fuelId);
         ////登录
         //Login login(string LoginName, string LoginMima);
     }
